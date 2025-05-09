@@ -47,3 +47,16 @@ This project uses GitHub graphQL API to get the commit histories and write into 
 1. Add the following environment variables:
    - **GH_TOKEN:** The GitHub token generated above.
 1. [Pin the newly created Gist](https://help.github.com/en/github/setting-up-and-managing-your-github-profile/pinning-items-to-your-profile)
+
+## 📌tip
+
+1. .github/workflows/schedule.yml 파일에서
+
+```
+    env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
+          GIST_ID: ${{ secrets.GIST_ID }}
+          TIMEZONE: Asia/Seoul // TIMEZONE만 수정
+```
+    
+2. GH_TOKEN 발급 받을 시 repo 와 gist 는 꼭 체크, 일부만 체크하면 기능안함.
